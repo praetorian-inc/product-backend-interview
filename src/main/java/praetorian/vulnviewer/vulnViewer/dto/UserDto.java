@@ -1,4 +1,4 @@
-package praetorian.vulnviewer.dto;
+package praetorian.vulnviewer.vulnViewer.dto;
 
 import lombok.AccessLevel;
 import lombok.Value;
@@ -8,16 +8,16 @@ import java.util.UUID;
 
 @Value
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
-public class VulnerabilityDto {
-  UUID id;
+public class UserDto {
 
-  String title;
+  UUID id;
 
   UUID projectId;
 
-  String file;
+  String email;
 
-  String lineNumber;
+  String firstName;
 
-  String riskRating;
+  String lastName;
+
 }

@@ -1,23 +1,18 @@
-package praetorian.vulnviewer.dto;
+package praetorian.vulnviewer.vulnViewer.dto;
 
 import lombok.AccessLevel;
 import lombok.Value;
 import lombok.experimental.FieldDefaults;
 
+import java.util.Set;
 import java.util.UUID;
 
 @Value
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
-public class UserDto {
-
+public class ProjectDto {
   UUID id;
 
-  UUID projectId;
+  String title;
 
-  String email;
-
-  String firstName;
-
-  String lastName;
-
+  Set<UUID> users;
 }
