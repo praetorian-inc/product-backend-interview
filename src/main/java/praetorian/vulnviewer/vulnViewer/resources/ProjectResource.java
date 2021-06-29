@@ -3,6 +3,7 @@ package praetorian.vulnviewer.vulnViewer.resources;
 import lombok.NonNull;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import praetorian.vulnviewer.vulnViewer.dto.ProjectDto;
@@ -21,6 +22,11 @@ public class ProjectResource {
 
   @GetMapping("/user/{userId}")
   public Set<ProjectDto> getProjectsForUser(@PathVariable @NonNull UUID userId) {
+    return null;
+  }
+
+  @PostMapping("/user/userId")
+  public ProjectDto addUserToProject(@PathVariable @NonNull final UUID userId) {
     return null;
   }
 }
