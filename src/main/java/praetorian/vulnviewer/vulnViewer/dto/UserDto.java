@@ -26,6 +26,16 @@ public class UserDto {
 
   String lastName;
 
-  Set<String> roles; // User roles, e.g. VULNERABILITY_EDITOR, VULNERABILITY_VIEWER, PROJECT_EDITOR
+  Set<Role> roles;
+
+  public enum Role {
+    ADMIN,
+    VULNERABILITY_EDITOR,
+    VULNERABILITY_VIEWER,
+    PROJECT_EDITOR,
+    PROJECT_VIEWER,
+    USER_EDITOR,
+    USER_VIEWER
+  }
 
 }
