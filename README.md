@@ -41,6 +41,7 @@ The models returned are:
     - firstName: String
     - lastName: String
     - projectIds: Set\<UUID\>
+    - roles: Set\<String\>
     
  - Vulnerability
     - id: UUID
