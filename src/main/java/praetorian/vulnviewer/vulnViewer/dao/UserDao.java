@@ -5,7 +5,6 @@ import lombok.NonNull;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import praetorian.vulnviewer.vulnViewer.dao.sql.SQLService;
 import praetorian.vulnviewer.vulnViewer.dto.UserDto;
 
@@ -27,7 +26,9 @@ public class UserDao {
     return sqlService.findOne("SELECT * FROM Users WHERE id = " + userId.toString());
   }
 
-  public Set<UserDto> getUsersById(@NonNull final UUID projectId) {
-    return sqlService.findAll("SELECT * FROM Users WHERE projectId = " + projectId.toString()).map(entity -> (UserDto) entity).collect(toSet());
+  public Set<UserDto> getUsersForProject(@NonNull final UUID projectId) {
+    return sqlService
+      .findAll("SELECT * FROM Users WHERE projectId = " + projectId.toString())
+      .collect(toSet());
   }
 }
