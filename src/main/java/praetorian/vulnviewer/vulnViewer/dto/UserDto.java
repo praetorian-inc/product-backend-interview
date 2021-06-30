@@ -17,7 +17,8 @@ public class UserDto {
   @NonNull
   UUID id;
 
-  UUID projectId;
+  @NonNull
+  Set<UUID> projectIds;
 
   String email;
 

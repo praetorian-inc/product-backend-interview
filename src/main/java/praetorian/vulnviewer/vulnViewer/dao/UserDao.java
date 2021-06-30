@@ -28,7 +28,7 @@ public class UserDao {
 
   public Set<UserDto> getUsersForProject(@NonNull final UUID projectId) {
     return sqlService
-      .findAll("SELECT * FROM Users WHERE projectId = " + projectId.toString())
+      .findAll("SELECT * FROM Users WHERE CONTAINS(projectIds, " + projectId.toString() + ")")
       .collect(toSet());
   }
 }
