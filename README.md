@@ -15,7 +15,7 @@ A RESTful Spring boot server that serves three resources:
     - GET `/project/{projectId}/`
        - finds all users that belong to the given project
     - PUT `/`
-       - Take a UserDto amd upsert it in the database
+       - Take a UserDto and upsert it in the database
  - `/api/v1//vulnerability`
     - GET `/{vulnerabilityId}/`
        - find and return a project with the given id
