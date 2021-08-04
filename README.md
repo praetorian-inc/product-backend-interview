@@ -18,7 +18,7 @@ A RESTful Spring boot server that serves three resources:
        - Take a UserDto and upsert it in the database
  - `/api/v1//vulnerability`
     - GET `/{vulnerabilityId}/`
-       - find and return a project with the given id
+       - find and return a vulnerability with the given id
     - GET `/project/{projectId}/`
        - find and return all vulnerabilities that belong to the given project
     - GET `/user/{userId}/`
